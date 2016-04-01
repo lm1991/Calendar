@@ -1,0 +1,165 @@
+<RelativeLayout
+    android:id="@+id/contentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:id="@+id/monthTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:text="3月"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/monthTv"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weekTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="周三"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                />
+
+            <TextView
+                android:id="@+id/yearTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="2016年"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nextMonthImgV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:contentDescription="Next Month"
+            android:src="@drawable/img_right"/>
+
+        <ImageView
+            android:id="@+id/preMonthImgV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:layout_toStartOf="@+id/nextMonthImgV"
+            android:src="@drawable/img_left"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="#fff"
+        />
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/topDivider"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Sunday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Monday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Tuesday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Wednesday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Thursday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Friday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Saturday"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/appwidget_gridview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dateLayout"
+        android:choiceMode="singleChoice"
+        android:numColumns="7"></GridView>
+
+</RelativeLayout>
